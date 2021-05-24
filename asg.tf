@@ -7,6 +7,8 @@ module "asg" {
   region          = var.region
   PORT            = 8080
   HEALTH          = "/health"
+  ASG_LOAD_AVG    = var.ASG_LOAD_AVG
+  ASG_MAX_INSTANCES = var.ASG_MAX_INSTANCES
   APP_ARTIFACT_VERSION = var.APP_ARTIFACT_VERSION
 } // calling other module(terraform-asg) as asg module also pass the variables to it.
 
